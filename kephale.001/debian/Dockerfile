@@ -14,6 +14,6 @@ RUN apt-get update && \
     && rm -rf /var/lib/apt/lists/*
 
 # COPY --from=0 /nix-emacs/nix/store /nix/store
-# ENV PATH="/nix/store/emacs/bin:$PATH"
+ENV PATH="/nix/store/emacs/bin:$PATH"
 
 CMD ["emacs"]
