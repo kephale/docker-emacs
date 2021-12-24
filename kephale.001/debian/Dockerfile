@@ -9,10 +9,11 @@ RUN apt-get update && \
             curl \
             gnupg \
             openssh-client \
-            texlive-full \
+            texlive-latex-base \
+            pandoc \
     && rm -rf /var/lib/apt/lists/*
 
-COPY --from=0 /nix-emacs/nix/store /nix/store
-ENV PATH="/nix/store/emacs/bin:$PATH"
+# COPY --from=0 /nix-emacs/nix/store /nix/store
+# ENV PATH="/nix/store/emacs/bin:$PATH"
 
 CMD ["emacs"]
