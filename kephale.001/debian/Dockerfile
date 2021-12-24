@@ -14,7 +14,8 @@ RUN apt-get update && \
             curl \
             gnupg \
             openssh-client \
-            texlive-latex-base \
+            texlive-full \            
+#            texlive-latex-base \
             pandoc \
     && rm -rf /var/lib/apt/lists/*
 
