@@ -9,7 +9,7 @@ RUN apt-get update && \
             curl \
             gnupg \
             openssh-client \
-            texlive-latex-base \
+            texlive-full \
     && rm -rf /var/lib/apt/lists/*
 
 COPY --from=0 /nix-emacs/nix/store /nix/store
